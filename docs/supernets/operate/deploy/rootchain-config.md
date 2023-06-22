@@ -172,18 +172,21 @@ If the `StakeManager` hasn't been deployed to the rootchain, you need to carry o
 <details>
 <summary>Flags ↓</summary>
 
-| Flag                   | Description                                                                      | Example |
-|------------------------|----------------------------------------------------------------------------------|---------|
-| `register-validator`   | Registers a whitelisted validator to supernet manager on rootchain               | `register-validator --validator-address 0xB16D...8DAB` |
-| `stake`                | Stakes the amount sent for validator on rootchain                                | `stake --amount 1000 --validator 0xB16D...8DAB` |
-| `stake-manager-deploy` | Command for deploying stake manager contract on rootchain                        | `--` |
-| `supernet`             | Performs supernet initialization & finalization command                          | `--` |
-| `unstake`              | Unstakes the amount sent for validator or undelegates amount from validator      | `unstake --validator 0xB16D...8DAB` |
-| `validator-info`       | Retrieves validator information                                                  | `validator-info --validator 0xB16D...8DAB` |
-| `whitelist-validators` | Whitelists new validators                                                        | `whitelist-validators --validator-address 0xB16D...8DAB` |
-| `withdraw-child`       | Withdraws pending withdrawals on child chain for a given validator               | `withdraw-child --validator 0xB16D...8DAB` |
-| `withdraw-rewards`     | Withdraws pending rewards on child chain for a given validator                   | `withdraw-rewards --validator 0xB16D...8DAB` |
-| `withdraw-root`        | Withdraws sender's withdrawable amount to a specified address on the root chain  | `withdraw-root --address 0xB16D...8DAB` |
+| Flag            | Description                                                                                            | Example |
+|-----------------|--------------------------------------------------------------------------------------------------------|---------|
+| `--config`      | Path to the SecretsManager config file, if omitted, the local FS secrets manager is used               |         |
+| `--data-dir`    | Directory for the Polygon Edge data if the local FS is used                                            |         |
+| `--genesis`     | Genesis file path, which contains chain configuration (default "./genesis.json")                       |         |
+| `--jsonrpc`     | The JSON-RPC interface (default "0.0.0.0:8545")                                                        |         |
+| `--private-key` | Hex-encoded private key of the account which executes rootchain commands                               |         |
+| `--stake-token` | Address of ERC20 token used for staking on rootchain                                                   |         |
+| `--test`        | Contract will be deployed using test account and a test stake ERC20 token will be deployed for staking |         |
+
+**Global Flags:**
+
+| Flag      | Description                                     | Example           |
+|-----------|-------------------------------------------------|-------------------|
+| `--json`  | Get all outputs in JSON format (default false). | `--json`          |
 
 </details>
 
@@ -407,17 +410,21 @@ This command includes a test flag, which is intended solely for testing scenario
 <details>
 <summary>Flags ↓</summary>
 
-| Flag                   | Description                                                                      | Example |
-|------------------------|----------------------------------------------------------------------------------|---------|
-| `register-validator`   | Registers a whitelisted validator to supernet manager on rootchain               | `register-validator --validator-address 0xB16D...8DAB` |
-| `stake`                | Stakes the amount sent for validator on rootchain                                | `stake --amount 1000 --validator 0xB16D...8DAB` |
-| `supernet`             | Performs supernet initialization & finalization command                          | `--` |
-| `unstake`              | Unstakes the amount sent for validator or undelegates amount from validator      | `unstake --validator 0xB16D...8DAB` |
-| `validator-info`       | Retrieves validator information                                                  | `validator-info --validator 0xB16D...8DAB` |
-| `whitelist-validators` | Whitelists new validators                                                        | `whitelist-validators --validator-address 0xB16D...8DAB` |
-| `withdraw-child`       | Withdraws pending withdrawals on child chain for a given validator               | `withdraw-child --validator 0xB16D...8DAB` |
-| `withdraw-rewards`     | Withdraws pending rewards on child chain for a given validator                   | `withdraw-rewards --validator 0xB16D...8DAB` |
-| `withdraw-root`        | Withdraws sender's withdrawable amount to a specified address on the root chain  | `withdraw-root --address 0xB16D...8DAB` |
+| Flag            | Description                                                                                            | Example |
+|-----------------|--------------------------------------------------------------------------------------------------------|---------|
+| `--config`      | Path to the SecretsManager config file, if omitted, the local FS secrets manager is used               |         |
+| `--data-dir`    | Directory for the Polygon Edge data if the local FS is used                                            |         |
+| `--genesis`     | Genesis file path, which contains chain configuration (default "./genesis.json")                       |         |
+| `--jsonrpc`     | The JSON-RPC interface (default "0.0.0.0:8545")                                                        |         |
+| `--private-key` | Hex-encoded private key of the account which executes rootchain commands                               |         |
+| `--stake-token` | Address of ERC20 token used for staking on rootchain                                                   |         |
+| `--test`        | Contract will be deployed using test account and a test stake ERC20 token will be deployed for staking |         |
+
+**Global Flags:**
+
+| Flag      | Description                                     | Example           |
+|-----------|-------------------------------------------------|-------------------|
+| `--json`  | Get all outputs in JSON format (default false). | `--json`          |
 
 </details>
 
