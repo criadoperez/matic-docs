@@ -399,7 +399,7 @@ This command includes a test flag, which is intended solely for testing scenario
   ./polygon-edge polybft stake-manager-deploy \
   --deployer-key <hex_encoded_rootchain_account_private_key> \
   [--genesis ./genesis.json] \
-  [--json-rpc http://127.0.0.1:8545] \
+  [--jsonrpc http://127.0.0.1:8545] \
   [--stake-token 0xaddressOfStakeToken] \
   [--test]
   ```
